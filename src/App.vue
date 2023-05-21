@@ -6,7 +6,7 @@
       dark
     >
       <div class="d-flex align-center">
-        <h2>ChatGPT Stream</h2>
+        <h2>ChatGPT 体验端</h2>
       </div>
       <v-spacer></v-spacer>
       <v-btn @click="refreshPage" icon>
@@ -116,7 +116,7 @@ export default {
 		},
 		wsOnOpen() {
       const vm = this
-      let content = '[CONNECTED]<br/>Enter question prompt it will return an answer<br/>Enter "/image " + image description it will return the generated image'
+      let content = '[已连接]<br/>输入问题提示，它将返回一个答案<br/>输入"/image 图像描述及要求" 它将返回生成的图像'
       let msg = {
         header: content,
       }
@@ -125,7 +125,7 @@ export default {
 		},
 		wsOnError() {
       const vm = this
-      let content = '[CONNECT ERROR]'
+      let content = '[连接失败]'
       let msg = {
         header: content,
       }
@@ -150,22 +150,22 @@ export default {
         let color = 'white'
         let isImage = false
         if ((msgRecv.kind === 'error') || (msgRecv.kind === 'retry')) {
-          username = 'ERROR'
+          username = '错误'
           avatar = require('./assets/error.png')
           height = 60
           color = 'red lighten-5'
         } else if (msgRecv.kind === 'receive') {
-          username = 'YOU'
+          username = '你问'
           avatar = require('./assets/developer.png')
           height = 60
           color = 'blue lighten-5'
         } else if (msgRecv.kind === 'chat') {
-          username = 'CHATGPT'
+          username = 'AI答'
           avatar = require('./assets/chatgpt.png')
           height = 360
           color = 'green lighten-5'
         } else if (msgRecv.kind === 'image') {
-          username = 'CHATGPT'
+          username = 'AI答'
           avatar = require('./assets/chatgpt.png')
           height = 360
           color = 'green lighten-5'
@@ -195,7 +195,7 @@ export default {
 		},
 		wsOnClose() {
       const vm = this
-      let content = '[CONNECT CLOSED]'
+      let content = '[连接关闭]'
       let msg = {
         header: content,
       }
