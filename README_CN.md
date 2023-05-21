@@ -5,15 +5,15 @@
 
 ## chatGPT-service和chatGPT-stream
 
-- chatGPT-service: [https://github.com/cookeem/chatgpt-service](https://github.com/cookeem/chatgpt-service) 
+- chatGPT-service: [https://github.com/hicdl/chatgpt-service](https://github.com/hicdl/chatgpt-service) 
   - chatGPT-service是一个后端服务，用于实时接收chatGPT的消息，并通过websocket的方式实时反馈给chatGPT-stream
-- chatGPT-stream: [https://github.com/cookeem/chatgpt-stream](https://github.com/cookeem/chatgpt-stream) 
+- chatGPT-stream: [https://github.com/hicdl/chatgpt-stream](https://github.com/hicdl/chatgpt-stream) 
   - chatGPT-stream是一个前端服务，以websocket的方式实时接收chatGPT-service返回的消息
 
 ## gitee传送门
 
-- [https://gitee.com/cookeem/chatgpt-service](https://gitee.com/cookeem/chatgpt-service) 
-- [https://gitee.com/cookeem/chatgpt-stream](https://gitee.com/cookeem/chatgpt-stream) 
+- [https://gitee.com/hicdl/chatgpt-service](https://gitee.com/hicdl/chatgpt-service) 
+- [https://gitee.com/hicdl/chatgpt-stream](https://gitee.com/hicdl/chatgpt-stream) 
 
 ## 效果图
 
@@ -29,7 +29,7 @@
 
 ```bash
 # 拉取代码
-git clone https://github.com/cookeem/chatgpt-stream.git
+git clone https://github.com/hicdl/chatgpt-stream.git
 cd chatgpt-stream
 
 # chatGPT的注册页面: https://beta.openai.com/signup
